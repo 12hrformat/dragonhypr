@@ -10,6 +10,8 @@ printf '✓ %-22s %s (%s)\n' 'Operating system' "$PRETTY_NAME" "$ARCH"
 check_command Hyprland Hyprland hyprland
 check_command Waybar waybar waybar
 check_command Terminal kitty kitty
+check_command Browser firefox firefox-esr
+check_command File-manager thunar thunar
 check_command Launcher rofi rofi
 check_command Notifications swaync swaync
 check_command Wallpaper hyprpaper hyprpaper

@@ -24,7 +24,7 @@ Primary target: Kali rolling on a supported Debian architecture. Debian is accep
 
 ## Components
 
-Hyprland, Waybar, Kitty, Rofi, SwayNotificationCenter, Hyprpaper, Hyprlock, Hypridle, Grim/Slurp, wl-clipboard/Cliphist, Thunar, portals, Qt appearance tools, Papirus icons, and JetBrains Mono are required. Bluetooth, brightness, audio UI, media control, NetworkManager tray integration (`network-manager-applet`), Hyprland's PolicyKit agent (`hyprpolkitagent`), and emoji fonts are optional when found in the current APT metadata.
+Hyprland, Waybar, Kitty, Firefox ESR, Rofi, SwayNotificationCenter, Hyprpaper, Hyprlock, Hypridle, Grim/Slurp, wl-clipboard/Cliphist, Thunar, portals, Qt appearance tools, Papirus icons, and JetBrains Mono are required. Bluetooth, brightness, audio UI, media control, NetworkManager tray integration (`network-manager-applet`), Hyprland's PolicyKit agent (`hyprpolkitagent`), and emoji fonts are optional when found in the current APT metadata.
 
 The bar includes workspace, clock, CPU, RAM, disk, battery (hidden naturally when unsupported), network, audio, Bluetooth, VPN status, and tray. The VPN indicator queries active NetworkManager connections only; it never changes a VPN connection.
 
