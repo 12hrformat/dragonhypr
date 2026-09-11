@@ -1,0 +1,1 @@
+{ "positionX": "right", "positionY": "top", "control-center-width": 380, "timeout": 6, "widgets": ["title", "dnd", "notifications"] }

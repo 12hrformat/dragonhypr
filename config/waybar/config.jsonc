@@ -1,0 +1,17 @@
+{
+  "layer": "top", "position": "top", "height": 32,
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["custom/vpn", "network", "pulseaudio", "cpu", "memory", "disk", "battery", "bluetooth", "tray"],
+  "hyprland/workspaces": { "format": "{name}" },
+  "clock": { "format": "  {:%a %d %b  %H:%M}" },
+  "cpu": { "format": " {usage}%", "interval": 5 },
+  "memory": { "format": "󰍛 {}%", "interval": 5 },
+  "disk": { "format": "󰋊 {percentage_used}%", "path": "/" },
+  "battery": { "format": " {capacity}%", "format-charging": " {capacity}%" },
+  "network": { "format-wifi": "  {signalStrength}%", "format-ethernet": "󰈀 connected", "format-disconnected": "󰖪 offline", "tooltip-format": "{ifname}: {ipaddr}" },
+  "pulseaudio": { "format": " {volume}%", "format-muted": "󰝟 muted", "on-click": "pavucontrol" },
+  "bluetooth": { "format": "", "format-disabled": "", "format-off": "" },
+  "custom/vpn": { "exec": "nmcli -t -f TYPE,STATE connection show --active 2>/dev/null | grep -q '^vpn:activated$' && echo '󰖂 VPN' || echo ''", "interval": 10, "tooltip": false },
+  "tray": { "spacing": 8 }
+}

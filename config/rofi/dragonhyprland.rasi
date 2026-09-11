@@ -1,0 +1,7 @@
+* { bg: #121315; fg: #e8e6df; accent: #f2c94c; border: #303236; }
+window { width: 42%; border: 2px; border-color: @accent; border-radius: 8px; background-color: @bg; }
+mainbox { padding: 14px; }
+inputbar { children: [ prompt, entry ]; border: 0 0 1px 0; border-color: @border; padding: 0 0 10px 0; }
+listview { lines: 8; spacing: 4px; }
+element { padding: 7px; border-radius: 5px; }
+element selected { background-color: @accent; text-color: #121315; }

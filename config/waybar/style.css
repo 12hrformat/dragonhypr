@@ -1,0 +1,8 @@
+@import url("dragon-theme.css");
+* { border: none; border-radius: 0; font-family: "JetBrains Mono", sans-serif; font-size: 12px; min-height: 0; }
+window#waybar { background: @background; color: @foreground; border-bottom: 1px solid @border; }
+#workspaces button { padding: 0 8px; color: @muted; }
+#workspaces button.active { color: @accent; box-shadow: inset 0 -2px @accent; }
+#clock { font-weight: bold; color: @accent; padding: 0 12px; }
+#cpu, #memory, #disk, #battery, #network, #pulseaudio, #bluetooth, #custom-vpn, #tray { padding: 0 8px; }
+#custom-vpn { color: @accent; font-weight: bold; }

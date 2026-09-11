@@ -1,0 +1,2 @@
+configuration { modi: "drun,run,window"; show-icons: true; display-drun: "Apps"; }
+@theme "dragonhyprland"

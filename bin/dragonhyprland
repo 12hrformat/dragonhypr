@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+ROOT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd -P)
+source "$ROOT_DIR/scripts/lib.sh"
+usage() { cat <<EOF
+Usage: dragonhyprland <command>
+Commands: install, update, backup, restore [timestamp], uninstall [--restore],
+          theme list, theme set <name>, doctor, version
+EOF
+}
+theme_set() {
+  local name=${1:-} theme="$ROOT_DIR/themes/$name"
+  [[ -f $theme/theme.conf ]] || die "Unknown theme: ${name:-missing}. Run: dragonhyprland theme list"
+  mkdir -p "$DRAGON_CONFIG"
+  printf '%s\n' "$name" > "$DRAGON_CONFIG/theme"
+  cp "$theme/theme.conf" "$CONFIG_HOME/hypr/dragon-theme.conf"
+  cp "$theme/waybar.css" "$CONFIG_HOME/waybar/dragon-theme.css"
+  log "Theme set to $name. Reload Hyprland and Waybar to apply it."
+}
+case ${1:-help} in
+  install) exec "$ROOT_DIR/install.sh";;
+  update) "$ROOT_DIR/scripts/backup.sh" --automatic; "$ROOT_DIR/scripts/packages.sh" install; exec "$ROOT_DIR/scripts/deploy.sh";;
+  backup) exec "$ROOT_DIR/scripts/backup.sh";;
+  restore) shift; exec "$ROOT_DIR/scripts/restore.sh" "${1:-}";;
+  uninstall) shift; exec "$ROOT_DIR/scripts/uninstall.sh" "$@";;
+  doctor) exec "$ROOT_DIR/scripts/doctor.sh";;
+  version|--version) printf 'DragonHyprland %s\n' "$DRAGON_VERSION";;
+  theme) case ${2:-} in list) find "$ROOT_DIR/themes" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort;; set) theme_set "${3:-}";; *) usage; exit 2;; esac;;
+  help|--help|-h) usage;; *) usage; exit 2;;
+esac
