@@ -1,7 +1,8 @@
 # DragonHyprland
+### under development, is this bugs out please, tell
 #### kali-linux hyprland config files
 
-> Created by Dragon. Built for Kali users who want a complete, maintainable Hyprland desktop—not a disposable rice.
+> Created by 12hrformat. Built for Kali linux users who want a complete, maintainable Hyprland desktop—not a disposable rice.
 
 DragonHyprland is an independent, Kali Linux–first Hyprland desktop setup framework. It is inspired by the idea of a complete, maintainable Hyprland setup, not affiliated with ML4W and not a copy of an Arch configuration.
 
