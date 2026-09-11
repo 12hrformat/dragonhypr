@@ -1,4 +1,5 @@
 # DragonHyprland
+#### kali-linux hyprland config files
 
 > Created by Dragon. Built for Kali users who want a complete, maintainable Hyprland desktop—not a disposable rice.
 
