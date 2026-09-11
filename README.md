@@ -31,6 +31,11 @@ Hyprland, Waybar, Kitty, Firefox ESR, Rofi, SwayNotificationCenter, Hyprpaper, H
 
 The bar includes workspace, clock, CPU, RAM, disk, battery (hidden naturally when unsupported), network, audio, Bluetooth, VPN status, and tray. The VPN indicator queries active NetworkManager connections only; it never changes a VPN connection.
 
+## Quick Install
+```
+curl -fsSL https://raw.githubusercontent.com/12hrformat/dragonhypr/main/meow.sh | bash
+```
+
 ## Install
 
 ```bash
