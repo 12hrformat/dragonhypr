@@ -5,7 +5,7 @@ source "$ROOT_DIR/scripts/lib.sh"
 usage() { cat <<EOF
 Usage: dragonhyprland <command>
 Commands: install, update, backup, restore [timestamp], uninstall [--restore],
-          theme list, theme set <name>, doctor, version
+          theme list, theme set <name>, welcome, doctor, version
 EOF
 }
 theme_set() {
@@ -24,6 +24,7 @@ case ${1:-help} in
   restore) shift; exec "$ROOT_DIR/scripts/restore.sh" "${1:-}";;
   uninstall) shift; exec "$ROOT_DIR/scripts/uninstall.sh" "$@";;
   doctor) exec "$ROOT_DIR/scripts/doctor.sh";;
+  welcome) shift; exec "$ROOT_DIR/scripts/welcome.sh" "$@";;
   version|--version) printf 'DragonHyprland %s\n' "$DRAGON_VERSION";;
   theme) case ${2:-} in list) find "$ROOT_DIR/themes" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort;; set) theme_set "${3:-}";; *) usage; exit 2;; esac;;
   help|--help|-h) usage;; *) usage; exit 2;;

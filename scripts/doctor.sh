@@ -18,6 +18,7 @@ check_command Idle hypridle hypridle
 check_command Screenshot grim grim
 check_command Clipboard wl-paste wl-clipboard
 check_command Audio-control wpctl wireplumber
+check_command Welcome-dialog zenity zenity
 [[ -r "$CONFIG_HOME/hypr/hyprland.conf" ]] && printf '✓ %-22s %s\n' 'Hyprland config' "$CONFIG_HOME/hypr/hyprland.conf" || { printf '✗ %-22s Run dragonhyprland install\n' 'Hyprland config'; status=1; }
 [[ ${XDG_SESSION_TYPE:-} == wayland ]] && printf '✓ %-22s Wayland\n' 'Session' || printf '! %-22s Not currently a Wayland session\n' 'Session'
 [[ -n ${HYPRLAND_INSTANCE_SIGNATURE:-} ]] && printf '✓ %-22s Connected\n' 'Hyprland environment' || printf '! %-22s Start/restart Hyprland to test\n' 'Hyprland environment'

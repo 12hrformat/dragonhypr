@@ -24,7 +24,7 @@ Primary target: Kali rolling on a supported Debian architecture. Debian is accep
 
 ## Components
 
-Hyprland, Waybar, Kitty, Rofi, SwayNotificationCenter, Hyprpaper, Hyprlock, Hypridle, Grim/Slurp, wl-clipboard/Cliphist, Thunar, portals, Qt appearance tools, Papirus icons, and JetBrains Mono are required. Bluetooth, brightness, audio UI, media control, NetworkManager tray integration, PolicyKit agent, and emoji fonts are optional when found in the current APT metadata.
+Hyprland, Waybar, Kitty, Rofi, SwayNotificationCenter, Hyprpaper, Hyprlock, Hypridle, Grim/Slurp, wl-clipboard/Cliphist, Thunar, portals, Qt appearance tools, Papirus icons, and JetBrains Mono are required. Bluetooth, brightness, audio UI, media control, NetworkManager tray integration (`network-manager-applet`), Hyprland's PolicyKit agent (`hyprpolkitagent`), and emoji fonts are optional when found in the current APT metadata.
 
 The bar includes workspace, clock, CPU, RAM, disk, battery (hidden naturally when unsupported), network, audio, Bluetooth, VPN status, and tray. The VPN indicator queries active NetworkManager connections only; it never changes a VPN connection.
 
@@ -49,9 +49,14 @@ dragonhyprland backup
 dragonhyprland restore 2026-09-11_12-30-00
 dragonhyprland update
 dragonhyprland uninstall --restore
+dragonhyprland welcome --reset
 ```
 
 `uninstall` removes only paths recorded in its deployment manifest and intentionally leaves APT packages installed. `--restore` restores the backup recorded immediately before the first installation.
+
+## First-run welcome
+
+On its first Hyprland startup, DragonHyprland shows a welcome dialog with the essential shortcuts. The user can keep the full welcome screen on every startup, show shortcuts only, save a shortcut sheet to `~/Documents`, or disable it. Re-enable the full welcome screen at any time with `dragonhyprland welcome --reset`.
 
 ## Theme and wallpaper system
 

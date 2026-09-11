@@ -3,8 +3,8 @@
 set -Eeuo pipefail
 ROOT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd -P)
 source "$ROOT_DIR/scripts/lib.sh"
-required=(hyprland waybar kitty rofi sway-notification-center hyprpaper hyprlock hypridle grim slurp wl-clipboard cliphist thunar wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland qt5ct qt6ct papirus-icon-theme fonts-jetbrains-mono)
-optional=(blueman brightnessctl pavucontrol playerctl network-manager-gnome polkitd-gnome noto-fonts-color-emoji)
+required=(hyprland waybar kitty rofi sway-notification-center hyprpaper hyprlock hypridle grim slurp wl-clipboard cliphist thunar wireplumber zenity xdg-desktop-portal xdg-desktop-portal-hyprland qt5ct qt6ct papirus-icon-theme fonts-jetbrains-mono)
+optional=(blueman brightnessctl pavucontrol playerctl network-manager-applet hyprpolkitagent fonts-noto-color-emoji)
 available=() missing=()
 resolve() { apt-cache show "$1" >/dev/null 2>&1; }
 plan() {
