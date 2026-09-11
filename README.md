@@ -1,8 +1,8 @@
 # DragonHyprland
-### under development, is this bugs out please, tell
 #### kali-linux hyprland config files
 
-> Created by 12hrformat. Built for Kali linux users who want a complete, maintainable Hyprland desktop—not a disposable rice.
+> Created by 12hrformat. Built for Kali linux users who want a aesthetic Hyprland desktop—not a disposable rice.
+> under development, please expect bugs and glitches because making hyprland config on kali is a pain
 
 DragonHyprland is an independent, Kali Linux–first Hyprland desktop setup framework. It is inspired by the idea of a complete, maintainable Hyprland setup, not affiliated with ML4W and not a copy of an Arch configuration.
 
@@ -33,8 +33,8 @@ The bar includes workspace, clock, CPU, RAM, disk, battery (hidden naturally whe
 ## Install
 
 ```bash
-git clone <your-repository-url> DragonHyprland
-cd DragonHyprland
+git clone https://github.com/12hrformat/dragonhypr.git
+cd dragonhypr
 chmod +x install.sh update.sh uninstall.sh bin/dragonhyprland scripts/*.sh
 ./install.sh
 ```
