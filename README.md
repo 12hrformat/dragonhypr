@@ -5,7 +5,7 @@
 
 > under development, please expect bugs and glitches because making hyprland config on kali is a pain
 
-DragonHyprland is an independent, Kali Linux–first Hyprland desktop setup framework. It is inspired by the idea of a complete, maintainable Hyprland setup, not affiliated with ML4W and not a copy of an Arch configuration.
+DragonHyprland is an independent, Kali Linux–first Hyprland desktop setup framework, inspired by https://github.com/ML4W
 
 It deliberately leaves APT source configuration untouched. Every required package is checked with `apt-cache show` against the repositories already configured on the target before installation; an unavailable required package stops the install with a clear report.
 
